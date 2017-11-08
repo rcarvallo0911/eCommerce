@@ -1,0 +1,111 @@
+<!doctypehtml>
+<html>
+    <head>
+        <title>Maybe you'll want to buy this</title>
+        <style>
+            img{
+                width:100px;
+            }
+            input{
+                width:20px;
+            }
+        </style>
+        <script>
+            function Csub(){
+                var q1 = document.getElementById("q1");
+                var q2 = document.getElementById("q2");
+                var q3 = document.getElementById("q3");
+                var output = document.getElementById("output");
+                var subtotal = (parseInt(q1.value) * 18.85) + (parseInt(q2.value) * 19.80) + (parseInt(q3.value) * 20.00)
+                var tax = subtotal * .0875
+                var s; 
+                if (subtotal>=100){
+                    s = 25.00
+                }else if(subtotal>=100 && subtotal<=200 ){
+                    s = 10.00
+                }else(subtotal>=200)
+                    s = 0.00
+                var shipping = s
+                var total = tax + subtotal + shipping
+                var build = "";
+                build += "Subtotal: $" + subtotal.toFixed(2) + "<br>";
+                build += "Tax: $" + tax.toFixed(2) + "<br>";
+                build += "Shipping: $" + shipping.toFixed(2) + "<br>";
+                build += "_____________________<br>"
+                build += "Total $" + total.toFixed(2);
+                output.innerHTML = build;
+            }
+            function Cprof(){
+                var q1 = document.getElementById("q1");
+                var q2 = document.getElementById("q2");
+                var q3 = document.getElementById("q3");
+                var q1w = 25.00
+                var q2w = 30.00
+                var q3w = 40.00
+                var output =  document.getElementById("output");
+                var totitems =  parseInt(q1.value) + parseInt(q2.value) + parseInt(q3.value)
+                var subtotal = (parseInt(q1.value) * 18.85) + (parseInt(q2.value) * 19.80) + (parseInt(q3.value) * 20.00)
+                var comsub =  subtotal - (parseInt(q1.value) * q1w) + (parseInt(q2.value) * q2w) + (parseInt(q3.value) * q3w )
+                var comprof = subtotal - comsub
+                var build = ""
+                build += "Item 1: " + q1.value + "<br>";
+                build += "Items 2: " + q2.value + "<br>";
+                build += "Item 3: " + q3.value + "<br>";
+                build += "_____________________<br>";
+                build += "Total item's sold: " + totitems + "<br";
+                build += "Customer Subtotal: " + subtotal + "<br>";
+                build += "Company Subtotal: " + comsub + "<br>";
+                build += "_____________________<br>";
+                build += "Company Profit: " + comprof;
+                output.innerHTML= console.log(build);    
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>Richard Simmons Disco Sweat</h2>
+            <img src="richards.png"><br>
+            <span> 
+                $18.85 
+            </span>
+            <p>
+               Richard Simmons went missing, but this DVD hasn’t!<br>
+               You can use it for working out, strengthening bonds with your<br> 
+               children, making new friends, couples therapy, and becoming a<br>
+               better you!
+            </p>
+            Quantity: <input type = "text" id = "q1">
+            <h2>Leg warmers</h2>
+            <img src="Legwarmers.png"><br>
+            <span> 
+                $19.80 
+            </span>
+            <p>
+               Whether you’re reenacting the dance scene from “Flashdance”,<br>
+               or just want your legs to be warm, you’ll find that you’ll be<br>
+               using these beautiful leg warmers for almost everything!<br> 
+               These leg warmers are absolutely practical!
+            </p>
+            Quantity: <input type = "text" id = "q2">
+            <h2>Huey lewis and the News - Hip to be Square</h2>
+            <img src="hueyLewis.png"><br>
+            <span> 
+                $20.00 
+            </span>
+            <p>
+              A catchy song with an important statement that can’t be <br>
+              realized after the first listen, or ever, because of how<br> 
+              catchy it is. Listen to this bop on repeat!
+               
+            </p>
+            Quantity: <input type = "text" id = "q3"><br>
+            <button onclick = "Csub()" && onclick = "Cprof()">
+                Check out!
+            </button>
+            <div id = "output"></div>
+            
+
+        </div>
+        
+    </body>
+</html>
