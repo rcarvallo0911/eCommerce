@@ -1,0 +1,161 @@
+<!doctypehtml>
+<html>
+    <head>
+        <title>Book Worm</title>
+        <style>
+	html{
+		background:url('bg.jpg') no-repeat center center fixed;
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size: cover;
+		background-size:cover;
+	}
+	*{
+		margin: 0;
+		padding: 0;
+	}	
+	
+	h1 {
+		position: absolute;
+		left: 35%;
+		top: 0%;
+		font-family: "Georgia", Georgia, serif;
+		font-size: 30px;
+		color: white
+	   }
+	h2 {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	   }
+	h3 {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	   }
+	p {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	  }
+	span {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	     }
+            img{
+                width:200px;
+            }
+            input{
+                width:20px;
+            }
+        </style>
+        <script>
+            function Csub(){
+                var q1 = document.getElementById("q1");
+                var q2 = document.getElementById("q2");
+                var q3 = document.getElementById("q3");
+                var output = document.getElementById("output");
+                var subtotal = (parseInt(q1.value) * 18.85) + (parseInt(q2.value) * 19.80) + (parseInt(q3.value) * 20.00)
+                var tax = subtotal * .0875
+                var s; 
+                if (subtotal>=100){
+                    s = 25.00
+                }else if(subtotal>=100 && subtotal<=200 ){
+                    s = 10.00
+                }else(subtotal>=200)
+                    s = 0.00
+                var shipping = s
+                var total = tax + subtotal + shipping
+                var build = "";
+                build += "Subtotal: $" + subtotal.toFixed(2) + "<br>";
+                build += "Tax: $" + tax.toFixed(2) + "<br>";
+                build += "Shipping: $" + shipping.toFixed(2) + "<br>";
+                build += "_____________________<br>"
+                build += "Total $" + total.toFixed(2);
+                output.innerHTML = build;
+            }
+            function Cprof(){
+                var q1 = document.getElementById("q1");
+                var q2 = document.getElementById("q2");
+                var q3 = document.getElementById("q3");
+                var q1w = 15.00
+                var q2w = 13.00
+                var q3w = 11.00
+                var output =  document.getElementById("output");
+                var totitems =  parseInt(q1.value) + parseInt(q2.value) + parseInt(q3.value)
+                var subtotal = (parseInt(q1.value) * 18.85) + (parseInt(q2.value) * 19.80) + (parseInt(q3.value) * 20.00)
+                var comsub = (parseInt(q1.value) * q1w) + (parseInt(q2.value) * q2w) + (parseInt(q3.value) * q3w )
+                var comprof = subtotal - comsub
+                var build = ""
+                build += "Item 1: " + q1.value + "<br>";
+                build += "Items 2: " + q2.value + "<br>";
+                build += "Item 3: " + q3.value + "<br>";
+                build += "_____________________<br>";
+                build += "Total item's sold: " + totitems + "<br";
+                build += "Customer Subtotal: " + subtotal + "<br>";
+                build += "Company Subtotal: " + comsub + "<br>";
+                build += "_____________________<br>";
+                build += "Company Profit: " + comprof;
+                console.log(output.innerHTML= build);    
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+	    <h1>Classics that mustn't be missed!</h1><br>
+            <h2>War & Peace</h2>
+	    <h3>Leo Tolstoy</h3>
+            <img src="War&peace.jpg"><br>
+	    <button onclick="">
+		Preview
+	    </button><br>
+            <span> 
+                $10.85 
+            </span>
+            <p>
+               Considered to be one of the best written novels of all time,<br>
+	       Leo Tolstoy's War and Peace tackles intricate family issues and<br>
+	       struggles for survival during Napoleon's invasion of Russia.<br>
+	       The story follows Pierre Bezukhov, a stout, unhappily married, man who<br>
+	       seeks a purpose and Andrei Bolkonsky, a well established man who is<br>
+	       in search of glory. Despite being published it's age, this book can<br>
+               connect to many issues faced today. War and Peace is definitely a must read!
+            </p>
+            Quantity: <input type = "text" id = "q1">
+            <h2>Pride and Prejudice</h2>
+	    <h3>Jane Austen</h3>
+            <img src="pride&prej.jpg"><br>
+            <span> 
+                $9.80 
+            </span>
+            <p>
+               Despite being commonly seen as strictly a romance novel,<br>
+               Pride and Prejudice is also a satire on the time period.<br>
+               The story follows Elizabeth Bennet, a young woman of little to no<br>
+	       status in society,and Mr.Darcy, a well established and well respected<br> 
+	       young man. Jane Austen satirizes the social expectations of marriage<br> 
+	       during the time period perfectly! This book is definitely worth a read!<br> 
+            </p>
+            Quantity: <input type = "text" id = "q2">
+            <h2>Alice's Adventures In Wonderland</h2>
+	    <h3>Lewis Carroll</h3>
+            <img src="Aliceinw.jpg"><br>
+            <span> 
+                $7.90 
+            </span>
+            <p>
+ 	       Of course, it would be unpardonable to neglect Lewis Carroll's<br>
+	       Alice In Wonderland! As seen everywhere in pop culture memorabilia,<br>
+	       Alice In Wonderland has become a worldwide favorite. The book follows<br>
+               a young girl named Alice who finds in herself in a surreal world full of<br>
+	       oddities. If you have a wild imagination, this book is definitely for you!
+            </p>
+            Quantity: <input type = "text" id = "q3"><br>
+            <br><button onclick = "Csub()" && onclick = "Cprof()">
+                Check out!
+            </button>
+
+            <div id = "output"></div>
+            
+
+        </div>
+        
+    </body>
+</html>
