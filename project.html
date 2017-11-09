@@ -7,20 +7,21 @@
 		background:url('bg.jpg') no-repeat center center fixed;
 		-webkit-background-size:cover;
 		-moz-background-size:cover;
-		-o-background-size: cover;
+		-o-background-size:cover;
 		background-size:cover;
 	}
 	*{
 		margin: 0;
 		padding: 0;
-	}	
+	}
+	.center {
+    		text-align: center
+		}	
 	
 	h1 {
-		position: absolute;
-		left: 35%;
-		top: 0%;
+		
 		font-family: "Georgia", Georgia, serif;
-		font-size: 30px;
+		font-size: 50px;
 		color: white
 	   }
 	h2 {
@@ -41,6 +42,7 @@
 	     }
             img{
                 width:200px;
+		
             }
             input{
                 width:20px;
@@ -99,33 +101,35 @@
     </head>
     <body>
         <div>
-	    <h1>Classics that mustn't be missed!</h1><br>
-            <h2>War & Peace</h2>
-	    <h3>Leo Tolstoy</h3>
-            <img src="War&peace.jpg"><br>
-	    <button onclick="">
+	    <h1 class="center">Classics that mustn't be missed!</h1><br>
+            <h2 class="center">War & Peace</h2>
+	    <h3 class="center">Leo Tolstoy</h3>
+	    <div style="text-align: center;"><IMG SRC="War&peace.jpg" ALT="image"></div>
+            <br>
+	    <button onclick="" class="center">
 		Preview
 	    </button><br>
             <span> 
                 $10.85 
             </span>
-            <p>
+            <p class="center">
                Considered to be one of the best written novels of all time,<br>
 	       Leo Tolstoy's War and Peace tackles intricate family issues and<br>
 	       struggles for survival during Napoleon's invasion of Russia.<br>
 	       The story follows Pierre Bezukhov, a stout, unhappily married, man who<br>
 	       seeks a purpose and Andrei Bolkonsky, a well established man who is<br>
-	       in search of glory. Despite being published it's age, this book can<br>
-               connect to many issues faced today. War and Peace is definitely a must read!
+	       in search of glory. Despite it's age, this book can connect to many issues<br>
+	       faced today. War and Peace is definitely a must read!
             </p>
             Quantity: <input type = "text" id = "q1">
-            <h2>Pride and Prejudice</h2>
-	    <h3>Jane Austen</h3>
-            <img src="pride&prej.jpg"><br>
-            <span> 
+            <h2 class="center">Pride and Prejudice</h2>
+	    <h3 class="center">Jane Austen</h3>
+	    <div style="text-align: center;"><IMG SRC="pride&prej.jpg" ALT="image"></div>
+            <br>
+            <span class="center"> 
                 $9.80 
             </span>
-            <p>
+            <p class="center">
                Despite being commonly seen as strictly a romance novel,<br>
                Pride and Prejudice is also a satire on the time period.<br>
                The story follows Elizabeth Bennet, a young woman of little to no<br>
@@ -133,14 +137,15 @@
 	       young man. Jane Austen satirizes the social expectations of marriage<br> 
 	       during the time period perfectly! This book is definitely worth a read!<br> 
             </p>
-            Quantity: <input type = "text" id = "q2">
-            <h2>Alice's Adventures In Wonderland</h2>
-	    <h3>Lewis Carroll</h3>
-            <img src="Aliceinw.jpg"><br>
-            <span> 
+            Quantity: <input type = "text" id = "q2" class="center">
+            <h2 class="center">Alice's Adventures In Wonderland</h2>
+	    <h3 class="center">Lewis Carroll</h3>
+	    <div style="text-align: center;"><IMG SRC="Aliceinw.jpg" ALT="image"></div>
+            <br>
+            <span>  
                 $7.90 
             </span>
-            <p>
+            <p class="center">
  	       Of course, it would be unpardonable to neglect Lewis Carroll's<br>
 	       Alice In Wonderland! As seen everywhere in pop culture memorabilia,<br>
 	       Alice In Wonderland has become a worldwide favorite. The book follows<br>
@@ -150,7 +155,7 @@
             Quantity: <input type = "text" id = "q3"><br>
             <br><button onclick = "Csub()" && onclick = "Cprof()">
                 Check out!
-            </button>
+            </button class="center">
 
             <div id = "output"></div>
             
