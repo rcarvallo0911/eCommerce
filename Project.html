@@ -1,0 +1,255 @@
+<!doctypehtml>
+<html>
+    <head>
+        <title>Classic books</title>
+        <style>
+	html{
+		background:url('bg.jpg') no-repeat center center fixed;
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+		background-size:cover;
+	}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    body {
+        text-align: center;
+        margin:0px;
+        border: 0px;
+        
+    }
+    #navigationb{
+        width: 33;
+        height: 33px;
+        background-color: rgba(31, 22, 18, 0.658);
+        color: white;
+        overflow: hidden;
+    }
+    #navigationb a:hover{
+        background-color: rgba(31, 22, 18, 0.815);
+        color: white;
+    }
+    #homenav{
+        width: 33;
+        height: 33px;
+        background-color: rgba(31, 22, 18, 0.658);
+        color: white;
+        overflow: hidden;
+        position: fixed;
+    }
+    #homenav a:hover{
+        background-color: rgba(31, 22, 18, 0.815);
+        color: white;
+    }
+    #link{
+        color: white;
+        padding: 15px
+    }
+    .active {
+        background-color: #4CAF50;
+        color: white;
+    }
+    #navigationb .icon {
+        display: none;
+    }
+	.center {
+    		text-align: center
+		}	
+	.product {
+        width:500px;
+        margin:0 auto;
+    }
+	h1 {
+		
+		font-family: "Georgia", Georgia, serif;
+		font-size: 50px;
+		color: white
+	   }
+	h2 {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	   }
+	h3 {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	   }
+	p {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	  }
+	span {
+		font-family: "Georgia", Georgia, serif;
+		color: white
+	     }
+            img{
+                width:200px;
+		
+            }
+            input{
+                width:20px;
+            }
+    div {
+        color: white 
+    }
+        </style>
+        <script>
+            function Csub(){
+                var q1 = document.getElementById("q1");
+                var q2 = document.getElementById("q2");
+                var q3 = document.getElementById("q3");
+                var output = document.getElementById("output");
+                var subtotal = (parseInt(q1.value) * 10.85) + (parseInt(q2.value) * 9.80) + (parseInt(q3.value) * 7.90)
+                var tax = subtotal * .0875
+                var s; 
+                if (subtotal>=100){
+                    s = 25.00
+                }else if(subtotal>=100 && subtotal<=200 ){
+                    s = 10.00
+                }else(subtotal>=200)
+                    s = 0.00
+                var shipping = s
+                var total = tax + subtotal + shipping
+                var build = "";
+                build += "Subtotal: $" + subtotal.toFixed(2) + "<br>";
+                build += "Tax: $" + tax.toFixed(2) + "<br>";
+                build += "Shipping: $" + shipping.toFixed(2) + "<br>";
+                build += "_____________________<br>"
+                build += "Total $" + total.toFixed(2);
+                output.innerHTML = build;
+                var q1w = 15.00
+                var q2w = 13.00
+                var q3w = 11.00
+                var totitems = parseInt(q1.value) + parseInt(q2.value) + parseInt(q3.value)
+                var comsub = (parseInt(q1.value) * q1w) + (parseInt(q2.value) * q2w) + (parseInt(q3.value) * q3w)
+                var comprof = comsub - subtotal
+                var build2 = ""
+                build2 += "Item 1: " + q1.value + "\n";
+                build2 += "Item 2: " + q2.value + "\n";
+                build2 += "Item 3: " + q3.value + "\n";
+                build2 += "_____________________\n";
+                build2 += "Total item's sold: " + totitems + "<\n>";
+                build2 += "Customer Subtotal: " + subtotal.toFixed(2) + "<\n>";
+                build2 += "Company Subtotal: " + comsub.toFixed(2) + "<\n>";
+                build2 += "_____________________<\n>";
+                build2 += "Company Profit: " + comprof.toFixed(2);
+                console.log(build2);    
+            }
+            function p1(){
+                alert("‘Well, Prince, so Genoa and Lucca are now just family estates of the Buonapartes. But I warn you, if you don’t tell me that this means war, if you still try to defend the infamies and horrors perpetrated by that Antichrist - I really believe he is Antichrist - I will have nothing more to do with you and you are no longer my friend, no longer my ‘faithful slave,’ as you call yourself! But how do you do? I see I have frightened you - sit down and tell me all the news.’ It was in July, 1805, and the speaker was the wellknown Anna Pavlovna Scherer, maid of honor and favorite of the Empress Marya Fedorovna. With these words she greeted Prince Vasili Kuragin, a man of high rank and importance, who was the first to arrive at her reception. Anna Pavlovna had had a cough for some days. She was, as she said, suffering from la grippe; grippe being then a new word in St. Petersburg, used only by the elite... ")
+            }
+            function p2(){
+                alert("It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters. ‘My dear Mr. Bennet,’ said his lady to him one day, ‘have you heard that Netherfield Park is let at last?’ Mr. Bennet replied that he had not. ‘But it is,’ returned she; ‘for Mrs. Long has just been here, and she told me all about it.’ Mr. Bennet made no answer. ‘Do you not want to know who has taken it?’ cried his wife impatiently. ‘YOU want to tell me, and I have no objection to hearing it.’ This was invitation enough. ‘Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week.’ ‘What is his name?’ ‘Bingley.’ ‘Is he married or single?’ ‘Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a year. What a fine thing for our girls!’ ‘How so? How can it affect them?’ ‘My dear Mr. Bennet,’ replied his wife, ‘how can you be so tiresome! You must know that I am thinking of his marrying one of them.’")
+            }
+            function p3(){
+                alert("ALICE was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, ' and what is 'the use of a book,' thought Alice,' without pictures or conversations ?' So she was considering in her own mind, (as well as she could, for the hot day made her feel very sleepy and stupid,) whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a white rabbit with pink eyes ran close by her. There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself,'Oh dear ! Oh dear ! I shall be too late!'")
+            }
+        </script>
+    </head>
+    <body>
+        <section id="home"></section>
+        <div id="page-wrap">
+        <center>
+        </div>
+        <div id="navigationb">
+        <a href="#top" id="link">War & Peace</a>
+        <a href="#middle" id="link">Pride & Prejudice</a>
+        <a href="#bottom" id="link">Alice's Adventures in Wonderland</a>
+        <a href="#bottom" id="link">Checkout</a>
+        <a href="#music" id="link">Music</a>
+        </div>
+        <div id="homenav">
+        <a href="#home" id="link">Home</a>
+        </div>
+        </center>
+        <h1 class="center">Classics That Mustn't be Missed!</h1><br>
+        <div class="product">
+            <section id="top">  
+            <h2 class="center">War & Peace</h2>
+	        <h3 class="center">Leo Tolstoy</h3>
+            <div style="text-align: center;"><IMG SRC="War&peace.jpg" ALT="image"></div>
+            <button onclick="p1()">
+                Preview
+            </button>
+            <br>
+            <span> 
+                $10.85 
+            </span>
+            <p class="center">
+               Considered to be one of the best written novels of all time,
+	            Leo Tolstoy's War and Peace tackles intricate family issues and
+	            struggles for survival during Napoleon's invasion of Russia.
+	            The story follows Pierre Bezukhov, a stout, unhappily married, man who
+	            seeks a purpose and Andrei Bolkonsky, a well established man who is
+	            in search of glory. Despite it's age, this book can connect to many issues
+	            faced today. War and Peace is definitely a must read!
+            </p>
+            Quantity: <input type = "text" id = "q1">
+            </section>
+            <br>
+        </div>
+        <div class="product">
+            <section id="middle">
+            <div>
+            <h2 class="center">Pride & Prejudice</h2>
+	        <h3 class="center">Jane Austen</h3
+	        <style="text-align: center;"><IMG SRC="pride&prej.jpg" ALT="image">
+            <br>
+            <button onclick="p2()">
+                Preview
+            </button>
+            <br>
+            <span class="center"> 
+                $9.80 
+            </span>
+            <p class="center">
+               Despite being commonly seen as strictly a romance novel,
+               Pride and Prejudice is also a satire on the time period.
+               The story follows Elizabeth Bennet, a young woman of little to no
+	           status in society,and Mr.Darcy, a well established and well respected
+	           young man. Jane Austen satirizes the social expectations of marriage
+	           during the time period perfectly! This book is definitely worth a read!
+            </p>
+            Quantity: <input type = "text" id = "q2">
+            </section>
+            <br>
+        </div>
+            <section id="bottom">
+            <div class="product">
+            <h2 class="center">Alice's Adventures In Wonderland</h2>
+	        <h3 class="center">Lewis Carroll</h3>
+	        <div style="text-align: center;"><IMG SRC="Aliceinw.jpg" ALT="image">
+            <br>
+            <button onclick="p3()">
+                Preview
+            </button>
+            <br>
+            <span>  
+                $7.90 
+            </span>
+            <p class="center">
+ 	        Of course, it would be unpardonable to neglect Lewis Carroll's
+	        Alice In Wonderland! As seen everywhere in pop culture memorabilia,
+	        Alice In Wonderland has become a worldwide favorite. The book follows
+            a young girl named Alice who finds in herself in a surreal world full of
+	        oddities. If you have a wild imagination, this book is definitely for you!
+            </p>
+            Quantity: <input type = "text" id = "q3">
+            </div>
+            <br><button onclick = "Csub()">
+                Check out!
+            </button>
+            </section>
+            <div id = "output"></div>
+        </div>
+        <br>
+        <section id="music">
+        <audio controls autoplay>
+             <source src="chopinwaltz.mp3" type="audio/mpeg">
+        </audio>  
+        
+        </section>       
+        
+    </body>
+</html>
