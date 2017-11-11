@@ -103,7 +103,7 @@
                 var subtotal = (parseInt(q1.value) * 10.85) + (parseInt(q2.value) * 9.80) + (parseInt(q3.value) * 7.90)
                 var tax = subtotal * .0875
                 var s; 
-                if (subtotal>=100){
+                if (subtotal<=100){
                     s = 25.00
                 }else if(subtotal>=100 && subtotal<=200 ){
                     s = 10.00
